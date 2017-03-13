@@ -1,0 +1,58 @@
+<div class="row">
+ <div class="col col-md-12">
+      
+     <h1>Start New Scene</h1>
+     
+     <form class="form">
+       <div class="form-group">
+       <label for="name">Title (can be changed later):</label>
+         <input type="text" id="name" class="form-control" value="">
+         
+         <label for="privacy">Privacy:</label>
+           <select class="form-control" id="privacy">
+             <option>Private</option>
+             <option>Public/Open</option>
+           </select>
+         
+         <label for="date">Date:</label>
+         <input type="text" id="date" class="form-control" value="">
+         
+         
+         <label for="season">Season:</label>
+           <select class="form-control" id="season">
+             <option>Season 1: Signs and Portents</option>
+             <option>Season 2: Coming of the Shadows</option>
+             <option>None</option>
+           </select>
+         
+         
+         <label for="date">Date:</label>
+         <input type="text" id="date" class="form-control" value="">
+         
+         
+         <label for="summary">Summary (can be changed later):</label>
+         <textarea id="summary" class="form-control"> </textarea>
+         
+         <label for="location">Starting Location:</label>
+           <select class="form-control" id="location">
+             <option>TODO: This should really be a searchable list.</option>
+             <option>Rec Room</option>
+             <option>Landing Bay</option>
+           </select>
+         
+           
+       </div>       
+     </form>
+     
+     <div class="button-row">
+         <span class="btn btn-default" href="#" role="button">Add Character</span>
+         
+         {{#link-to "scene"}}<span class="btn btn-default" href="#" role="button">Start</span>{{/link-to}}
+
+     </div>
+     
+  </div>
+</div>
+
+    
+{{outlet}}

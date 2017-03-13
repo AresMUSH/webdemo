@@ -1,0 +1,27 @@
+<div class="row">
+ <div class="col col-md-12">
+      
+     <h1>Wiki</h1>
+     
+     <p>Your wiki landing page.  This text is configurable, as are the categories below.</p>
+     
+     <div>
+     {{#each model as |cat|}}
+        {{wiki-category-box category=cat}}
+     {{/each}}
+     
+     </div>
+     
+     <div class="clearfix" />
+     
+     <div class="button-row">
+        <span class="btn btn-default" href="#" role="button">Edit</span>
+     
+        <span class="btn btn-default" href="#" role="button">Create Page</span>
+     
+     </div>
+     
+  </div>
+</div>
+
+{{outlet}}

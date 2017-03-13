@@ -1,0 +1,53 @@
+<div class="row">
+ <div class="col col-md-12">
+      
+     <h1>Forum</h1>
+     
+     
+     <!-- Nav tabs -->
+     <ul class="nav nav-tabs" role="tablist">
+       <li role="presentation" class="active"><a href="#latest" aria-controls="latest" role="tab" data-toggle="tab">Latest Topics</a></li>
+       <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Categories</a></li>
+     </ul>
+
+     <!-- Tab panes -->
+     <div class="tab-content">
+       <div role="tabpanel" class="tab-pane active" id="latest">
+           <div class="panel panel-default">
+             <div class="panel-body">
+                
+                <ul class="list-group">
+                 <li class="list-group-item"><a href="/forum">
+                    <img src="/assets/images/faraday.jpg" class="forum-profile-icon" /> Best Game Evar</a> <span class="badge">1d</span> <span class="label label-success">New</span> <span class="clearfix" /> </li>
+                 <li class="list-group-item"><img src="/assets/images/barnacles.jpg" class="forum-profile-icon" /> <a href="/forum">Furious Debate</a> <span class="badge">2d</span>
+                 <span class="clearfix" /> </li>
+                </ul>
+                
+                
+             </div>
+           </div>
+          </div>
+           
+           <div role="tabpanel" class="tab-pane" id="categories">
+               <div class="panel panel-default">
+                 <div class="panel-body">
+
+                <ul class="list-group">
+                 <li class="list-group-item"><span class="fa fa-bullhorn fa-2x"></span> <a href="/forum">Announcements</a> <span class="badge">1d</span> <span class="label label-success">New</span></li>
+                 <li class="list-group-item"><span class="fa fa-comments fa-2x"></span> <a href="/forum">Discussions</a> <span class="badge">2d</span></li>
+                </ul>
+                
+                 </div>
+               </div>
+             </div>
+       </div>
+       
+        
+    <div class="button-row">
+       <span class="btn btn-default" href="#" role="button">New Topic</span>
+    </div>
+    
+  </div>
+</div>
+
+{{outlet}}

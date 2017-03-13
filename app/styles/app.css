@@ -1,0 +1,355 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  /* padding-top: 31px; */
+}
+
+.navbar
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    
+}
+
+footer
+{
+    padding: 10px;
+}
+
+.form-control
+{
+    margin: 5px;
+}
+
+.input-group .form-control
+{
+    margin: 0px;
+}
+
+.btn-splash
+{
+    background-color: #8b0000;
+    border-color: #800000;
+    color: white;
+}
+
+.btn-splash:hover,
+.btn-splash.hover {
+    background-color: #AB1616;
+    color: white;
+    border-color: #AB1616;
+}
+
+.container, .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+    
+}
+
+.navbar 
+{
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+.jumbotron
+{
+    background-color: #eee;
+    font-weight: bold;
+    text-align: center;
+}
+
+.jumbotron-tagline
+{
+    font-size: 3em;
+}
+
+.container-fluid .jumbotron
+{
+    border-radius: 0px;
+}
+
+.header-wrap nav
+{
+    background-color: rgba(24, 35, 52, .45);
+    border: none;
+}
+
+
+.header-wrap
+{
+    background: url('/assets/images/background.jpg');
+    height: 200px;   
+    background-position: center; 
+}
+
+.title-wrap
+{    
+    height: 149px;   
+    padding-left: 20px;    
+    color: white;
+    padding-top: 21px;
+    background-color: rgba(0, 0, 0, .25); 
+}
+
+.site-title {
+    margin: 0px;
+    font-size: 3em;
+}
+
+.site-subtitle {
+    font-size: 1.2em;
+}
+
+.site-title a, .site-title a:hover, .site-title a:active
+{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-right
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+.body-wrap
+{
+    padding: 10px 0px 0px 20px;
+}
+
+.feature-center
+{
+    text-align: center;
+}
+
+.badge.important
+{
+    background-color: #8b0000;
+}
+
+h1
+{
+    background-color: #182334;
+    padding: .1em 1.2em;
+    color: white;
+    font-weight: normal;
+    border: 3px solid #61718c;
+    letter-spacing: 0.1em;
+    -moz-border-radius: 0px 25px;
+    -webkit-border-radius: 0px 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+h2
+{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.profile-image
+{
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+    margin: auto;    
+}
+
+.player-profile-icon-wrap
+{
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    position: relative;
+    float: left;
+    background-color: black;
+    margin: 10px;
+}
+
+.player-profile-icon-wrap img
+{
+    width: 75px;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto; 
+}
+
+.forum-profile-icon
+{
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    float: left;
+    background-color: black;
+    margin: 2px;
+}
+
+.profile-wrap, .log-wrap {
+    border-radius: 8px;
+    border: 1px solid #61718c; 
+    background-color: #394252;
+    margin:5px;
+    padding:15px; 
+    background-position:left top;
+    background-size: stretch;
+    background-repeat: no-repeat;
+    background-image:url('/assets/images/profile-bg.png');
+}
+
+.profile-pb
+{
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+.profile-demographics
+{
+    background-color: white;
+    padding: 20px;
+}
+
+.icon-image-wrap
+{
+    
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.icon-image-wrap img
+{
+    width: 150px;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+
+.icon-image-caption
+{
+    position: absolute; 
+    top: 132px;
+    color: white;
+    margin-left: 10px;
+}
+
+.icon-image-caption span
+{
+    background-color: rgba(24, 35, 52, .45);
+}
+
+.icon-image-wrap
+{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    
+}
+
+.profile-box-wrap
+{
+    padding: 5px;
+    float: left;
+    position: relative;
+}
+
+.location-wrap a
+{
+    color: black;
+}
+
+.location-wrap
+{
+    padding: 20px;
+    float: left;
+    text-align: center;
+    border: 1px solid #eee;
+    margin: 10px;
+}
+
+.location-image-wrap
+{
+    width: 200px;
+    height: 100px;
+    overflow:hidden;
+}
+
+.location-image-wrap img
+{
+    width: 200px;
+}
+
+.location-image
+{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.wiki-category-wrap a
+{
+    color: black;
+}
+
+
+.wiki-category-wrap
+{
+    padding: 20px;
+    float: left;
+    text-align: center;
+    border: 1px solid #eee;
+    margin: 10px;
+    width: 200px;
+}
+
+.button-row
+{
+    padding: 10px;
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.sidebar a
+{
+    color: #995800;
+}
+.sidebar
+{
+    color: #999;
+}
+.sidebar h2 
+{
+    color: #999;
+    font-size: 1.25em;
+    padding: 5px 0px 2px 0px;
+    margin: 20px 0px 0px 0px;
+}
+
+.list-unstyled li
+{
+    padding-top: 4px;
+}
+
+@media (max-width: 767px) {
+    nav { z-index: 99; }
+    .header-wrap .navbar-collapse { background-color: black; }
+    .site-title { font-size: 2em;}
+    .sidebar { border-top: 1px solid #999; margin-top: 20px;}
+}

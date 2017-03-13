@@ -1,0 +1,162 @@
+{{outlet}}
+
+<h1>{{model.name}}</h1>
+
+<div class="row profile-wrap">
+    <div class="col col-sm-4"> 
+    
+        <div>
+          <img src="/assets/images/{{model.profile_image}}"  class="profile-image"/>
+        </div>
+    
+          <div class="profile-pb">Played by {{model.played_by}}</div>
+    </div>
+    <div class="col col-sm-8"> 
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-2">
+                        <b>Name:</b> 
+                </div>
+                <div class="col-sm-10">
+                        {{model.name}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                        <b>Age:</b> 
+                </div>
+                <div class="col-sm-10">
+                        {{model.age}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                        <b>Gender:</b> 
+                </div>
+                <div class="col-sm-10">
+                        {{model.gender}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                        <b>Faction:</b> 
+                </div>
+                <div class="col-sm-10">
+                        {{model.faction}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                        <b>Position:</b> 
+                </div>
+                <div class="col-sm-10">
+                        {{model.position}}
+                </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+   <div class="col col-sm-12">
+       
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#background" aria-controls="background" role="tab" data-toggle="tab">Background</a></li>
+    <li role="presentation"><a href="#sheet" aria-controls="sheet" role="tab" data-toggle="tab">Character Sheet</a></li>
+    <li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab">Relationships</a></li>
+    <li role="presentation"><a href="#wounds" aria-controls="wounds" role="tab" data-toggle="tab">Wounds</a></li>    
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="background">
+        <div class="panel panel-default">
+          <div class="panel-body">
+           Background would be here.
+          </div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="sheet">
+     {{fs3-sheet}}
+    </div>
+    <div role="tabpanel" class="tab-pane" id="relationships"> 
+        <div class="panel panel-default">
+          <div class="panel-body">
+          No friends.  So sad.
+          </div>
+        </div>
+    </div>
+    
+    <div role="tabpanel" class="tab-pane" id="wounds"> 
+        <div class="panel panel-default">
+          <div class="panel-body">
+          Old combat wounds.
+          </div>
+        </div>
+    </div>
+  </div>
+
+   </div>
+</div>
+
+<div class="row">
+   <div class="col col-sm-12">
+       <div class="panel panel-default">
+         <div class="panel-heading">
+            Notes
+         </div>
+         <div class="panel-body">
+         Freeform notes.
+         </div>
+       </div>
+   </div>
+</div>
+
+
+<div class="row">
+   <div class="col col-sm-12">
+       <div class="panel panel-default">
+         <div class="panel-heading">
+            RP Hooks
+         </div>
+         <div class="panel-body">
+            <ul>
+              <li>Hook</li>
+              <li>Hook</li>
+            </ul>
+         </div>
+       </div>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col col-sm-12">
+       <div class="panel panel-default">
+         <div class="panel-heading">
+            Scenes
+         </div>
+         <div class="panel-body">
+            <ul>
+              <li>Scene1</li>
+              <li>Scene2</li>
+            </ul>
+         </div>
+       </div>
+       
+       <div class="button-row">
+           {{#link-to "edit-char" model.id}}<span class="btn btn-default" href="#" role="button">Edit</span>{{/link-to}}
+       </div>
+       
+   </div>
+</div>
+

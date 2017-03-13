@@ -1,0 +1,29 @@
+<div class="row">
+ <div class="col col-md-4">
+      
+     <h1>Log In</h1>
+     
+     <form class="form">
+       <div class="form-group">
+         <input type="text" placeholder="Email" class="form-control">
+       </div>
+       <div class="form-group">
+         <input type="password" placeholder="Password" class="form-control">
+       </div>
+       
+      <button type="submit" class="btn btn-primary">Sign in</button>       
+     </form>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col col-md-12">
+ <hr/>
+ 
+    <p>Forgot your password?  {{#link-to "reset-pw"}}Reset it{{/link-to}}.</p>
+
+    <p>Don't have a username?  {{#link-to "signup"}}Sign up{{/link-to}} for one.</p>
+ </div>
+</div>
+
+{{outlet}}

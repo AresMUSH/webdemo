@@ -1,0 +1,114 @@
+Rework Player screen into  dashboard
+
+- Today Is 
+- MOTD
+- Your characters
+- Scenes in progress
+
+
+Move home screen to welcome
+
+Locations
+- Tabs for zone
+- Pictures in each tab
+- Zone notes in each tab
+
+Location
+- Name
+- Pic
+- Zone
+- Description
+- Scenes
+(Edit) (Retire)
+
+
+Character Screen
+(Retire)
+
+Admin
+- Game Settings
+	- Name
+	- Tagline
+	- Splash Page
+	- Logo
+- Seasons
+
+- Characters 
+	- All
+	- Retired
+	- Idle
+
+- Locations 
+	 - All
+	- Retired
+
+- Wiki
+	- Landing Page Text
+	- Categories
+	- All pages
+
+- FS3 Combat
+	-   Vehicles
+	- Weapons
+	- Armor
+	- Options
+
+- FS3 Skills
+	- Attrs
+	- Action
+	- Langs
+	- Opts
+
+- Factions
+- Positions
+- Ranks
+
+- Forum
+	- Categories
+
+- Scenes
+	- Start New Scene
+	- Running Scenes
+		- Yours
+		- Public
+	- Completed Scenes
+		- Yours
+		- Organized  by season
+
+- Scene
+	- Title
+	- Status [ Running / Completed ]
+	- Privacy [ Public / Private ]
+	- Characters
+	- Date
+	- Season
+	- Starting Location
+	- Summary
+
+- Wiki
+	- Protect/unprotect page button
+
+- Characters Page
+	- Faction notes after character profiles
+
+- Scene Actions
+	———- Scene Management 
+	- Join as NPC/Storyteller (Can only participate if you’re joined as your char or a NPC)
+	- Add/Remove Char
+	- Change Location
+	- End Scene [ Restart ]
+	- Delete Scene [ Creator Only ]
+	————— Combat Managemenet
+	- Start Combat [ Manage Combat  /  Stop Combat ]
+	- Set Combat Action  (for self or NPC)
+	- Change Gear
+	- Change Vehicle
+	- New Turn
+	- Transfer Organizer
+	——————— Write
+	- Add Roll
+	- Add Comment
+	- Add Pose
+
+
+- Link to AresMUSH handle?  Restrict reserved usernames?

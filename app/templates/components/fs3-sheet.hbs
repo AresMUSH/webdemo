@@ -1,0 +1,48 @@
+<div class="panel panel-default">  
+  <div class="panel-body">
+  
+  <p><b>Attributes</b></p>
+  
+  <ul>
+  {{#each fs3attrs as |att|}}
+ 
+  <li>{{att.name}}: {{att.rating}} ({{att.ratingName}})</li>
+
+  {{/each}}
+  </ul>
+  
+  <p><b>Action Skills</b></p>
+  
+  <ul>
+  {{#each fs3action as |skill|}}
+ 
+  <li>{{skill.name}}: {{skill.rating}} ({{skill.ratingName}})</li>
+
+  {{/each}}
+  </ul>
+  
+  <p><b>Background Skills</b></p>
+  
+  <ul>
+  {{#each bgskills as |skill|}}
+  
+  <li>{{skill.name}}: {{skill.ratingName}} </li>
+  
+  {{/each}}
+  </ul>
+  
+  
+  <p><b>Languages</b></p>
+  
+  <ul>
+  {{#each langskills as |skill|}}
+  
+  <li>{{skill.name}}: {{skill.ratingName}}</li>
+  
+  {{/each}}
+  </ul>
+  
+  </div>
+  
+
+</div>

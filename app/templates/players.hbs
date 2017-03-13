@@ -1,0 +1,14 @@
+<div class="row">
+ <div class="col col-md-12">
+      
+     <h1>Players</h1>
+     
+    {{#each model as |char|}}
+       {{#link-to "player" char.id}}{{profile-box char=char}}{{/link-to}}
+    {{/each}}
+    <div class="clearfix" />
+                    
+  </div>
+</div>
+
+{{outlet}}

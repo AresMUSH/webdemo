@@ -1,0 +1,47 @@
+<div class="row">
+ <div class="col col-md-12">
+      
+     <h1>Locations</h1>
+     
+     
+     <!-- Nav tabs -->
+     <ul class="nav nav-tabs" role="tablist">
+       <li role="presentation" class="active"><a href="#galactica" aria-controls="galactica" role="tab" data-toggle="tab">Galactica</a></li>
+       <li role="presentation"><a href="#caprica" aria-controls="caprica" role="tab" data-toggle="tab">Caprica City</a></li>
+     </ul>
+
+     <!-- Tab panes -->
+     <div class="tab-content">
+       <div role="tabpanel" class="tab-pane active" id="galactica">
+           <div class="panel panel-default">
+             <div class="panel-body">
+                
+                <div>Blurb about the Galactica Zone</div>
+                
+                {{location-box name="Rec Room" zone="Galactica"}}
+                {{location-box name="Landing Bay" zone="Galactica"}}
+                <div class="clearfix" />
+                                
+             </div>
+           </div>
+          </div>
+           
+           <div role="tabpanel" class="tab-pane" id="caprica">
+               <div class="panel panel-default">
+                 <div class="panel-body">
+                    <div>Blurb about the Caprica Zone</div>
+
+                    {{location-box name="Cool Gardens" zone="CapricaCity"}}
+                    {{location-box name="Fun Theater" zone="CapricaCity"}}
+                    <div class="clearfix" />
+                
+                 </div>
+               </div>
+             </div>
+       </div>
+       
+         
+  </div>
+</div>
+
+{{outlet}}
