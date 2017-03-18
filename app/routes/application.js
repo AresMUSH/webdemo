@@ -12,7 +12,7 @@ export default Ember.Route.extend({
                     faction: 'Marines',
                     position: 'Combat Medic',
                     age: '30',
-                    profile_image: 'cate.jpg',
+                    profile_image: 'Cate.jpg',
                     played_by: 'Moon Bloodgood',
                     gender: 'Female'
                 },
@@ -26,7 +26,7 @@ export default Ember.Route.extend({
                     faction: 'Navy',
                     position: 'Viper Pilot',
                     age: '35',
-                    profile_image: 'kallas.jpg',
+                    profile_image: 'Kallas.jpg',
                     played_by: 'Jon Seda',
                     gender: 'Male'
                 },
