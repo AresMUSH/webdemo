@@ -30,8 +30,17 @@
            {{else}}
                <li>{{#link-to "login"}}<span class="fa fa-sign-in"></span> Login{{/link-to}}</li>
             {{/if}}
+                        
+            <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      
+                      Scenes <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li>{{#link-to "running-scenes"}}Running Scenes{{/link-to}}</li>
+                        <li>{{#link-to "scenes"}}Completed Scenes{{/link-to}}</li>
+                      </ul>
+                    </li>
             
-            <li>{{#link-to "scenes"}}Scenes{{/link-to}}</li>
             
             <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -42,13 +51,10 @@
                         <li>{{#link-to "players"}}Players{{/link-to}}</li>
                         <li>{{#link-to "locations"}}Locations{{/link-to}}</li>
                         <li>{{#link-to "skills"}}Skills{{/link-to}}</li>
-                        
-                        {{#if false}}
-                           <li role="separator" class="divider"></li>
+                        <li role="separator" class="divider"></li>
                         <li>{{#link-to "weapons"}}Weapons{{/link-to}}</li>
                         <li>{{#link-to "armor"}}Armor{{/link-to}}</li>
                         <li>{{#link-to "vehicles"}}Vehicles{{/link-to}}</li>
-                        {{/if}}
                       </ul>
                     </li>
                     

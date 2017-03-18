@@ -38,6 +38,7 @@ Router.map(function() {
   this.route('skills');
   this.route('create-scene');
   this.route('scene');
+  this.route('running-scenes');
 });
 
 export default Router;
