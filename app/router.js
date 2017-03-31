@@ -39,6 +39,7 @@ Router.map(function() {
   this.route('create-scene');
   this.route('scene');
   this.route('running-scenes');
+  this.route('forum-topic', { path: '/forum-topic/:forum_topic_id' });
 });
 
 export default Router;

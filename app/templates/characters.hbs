@@ -6,33 +6,31 @@
      
      <!-- Nav tabs -->
      <ul class="nav nav-tabs" role="tablist">
-       <li role="presentation" class="active"><a href="#navy" aria-controls="navy" role="tab" data-toggle="tab">Navy</a></li>
-       <li role="presentation"><a href="#marines" aria-controls="marines" role="tab" data-toggle="tab">Marines</a></li>
+     
+       {{#each factions as |faction index|}}           
+       <li role="presentation"  class="{{if (eq index 0) 'active' }}">
+         <a href="#{{faction.name}}" aria-controls="{{faction.name}}" role="tab" data-toggle="tab">{{faction.name}}</a></li>
+       {{/each}}
      </ul>
 
      <!-- Tab panes -->
      <div class="tab-content">
-       <div role="tabpanel" class="tab-pane active" id="navy">
-           <div class="panel panel-default">
+     
+     {{#each factions as |faction index|}}           
+       
+       <div role="tabpanel" class="tab-pane {{if (eq index 0) 'active' }}" id="{{faction.name}}">
+          <div class="panel panel-default">
              <div class="panel-body">
-                <div>Blurb about the Navy faction</div>
-
-                {{#each model as |char|}}
+                <div>{{faction.blurb}}</div>
+                {{#each faction.chars as |char|}}
                    {{#link-to "character" char.id}}{{profile-box char=char}}{{/link-to}}
                 {{/each}}
                 <div class="clearfix" />
-                
              </div>
            </div>
           </div>
+       {{/each}}
            
-           <div role="tabpanel" class="tab-pane" id="marines">
-               <div class="panel panel-default">
-                 <div class="panel-body">
-                  Each faction would have different characters obviously.
-                 </div>
-               </div>
-             </div>
        </div>
        
         

@@ -8,5 +8,6 @@ export default DS.Model.extend({
     position: DS.attr(),
     profile_image: DS.attr(),
     played_by: DS.attr(),
-    gender: DS.attr()
+    gender: DS.attr(),
+    origin: DS.attr()
 });

@@ -17,10 +17,11 @@
              <div class="panel-body">
                 
                 <ul class="list-group">
-                 <li class="list-group-item"><a href="/forum">
-                    <img src="/assets/images/Faraday.jpg" class="forum-profile-icon" /> Best Game Evar</a> <span class="badge">1d</span> <span class="label label-success">New</span> <span class="clearfix" /> </li>
-                 <li class="list-group-item"><img src="/assets/images/Barnacles.jpg" class="forum-profile-icon" /> <a href="/forum">Furious Debate</a> <span class="badge">2d</span>
-                 <span class="clearfix" /> </li>
+                
+                {{#each model as |topic index|}}
+                 <li class="list-group-item"><a href="/forum-topic/{{topic.id}}">
+                    <img src="/assets/images/{{topic.lastPost}}.jpg" class="forum-profile-icon" /> {{topic.title}}</a> <span class="badge">{{topic.id}}d</span> {{{if (eq index 0) '<span class="label label-success">New</span>' }}} <span class="clearfix" /></li>
+                {{/each}}
                 </ul>
                 
                 

@@ -2,19 +2,40 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model() {
-        this.get('store').push({
-            data: [{
+       this.get('store').push({
+            data: [
+                {
+                    id: 1,
+                    type: 'forum-topic',
+                    attributes: {
+                        title: 'Furious Debate',
+                        lastPost: 'Barnacles',
+                        posters: [ 'Faraday', 'Barnacles' ]                        
+                    }
+                },
+                
+                {
+                    id: 2,
+                    type: 'forum-topic',
+                    attributes: {
+                        title: 'Best Game Evar',
+                        lastPost: 'Faraday',
+                        posters: [ 'Barnacles', 'Phoebe', 'Faraday' ]
+                    }
+                },
+                
+                {
                 id: 1,
                 type: 'character',
                 attributes: {
-                    name: 'Cate Rhodes',
-                    rank: 'Lance Corporal',
+                    name: 'Luka Hale',
+                    rank: 'Lieutenant',
                     faction: 'Marines',
-                    position: 'Combat Medic',
-                    age: '30',
-                    profile_image: 'Cate.jpg',
-                    played_by: 'Moon Bloodgood',
-                    gender: 'Female'
+                    position: 'Rifleman',
+                    age: '32',
+                    profile_image: 'Hale.jpg',
+                    played_by: 'Assaad Bouab',
+                    gender: 'Male'
                 },
                 relationships: {}
             }, {
@@ -113,8 +134,18 @@ export default Ember.Route.extend({
                 },
                 relationships: {}
             },
+            
+            {
+                id: 3,
+                type: 'player',
+                attributes: {
+                    name: 'Phoebe',
+                    profile_image: 'Phoebe.jpg'
+                },
+                relationships: {}
+            },
   
         ]
-    });
+    }); 
 }
 });
