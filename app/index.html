@@ -9,10 +9,42 @@
 
     {{content-for "head"}}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://use.fontawesome.com/b93638e625.js"></script>
-    <script src="/assets/scripts/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/ee2438614b.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<!-- JQuery fallback -->
+
+<script>window.jQuery || document.write('<script src="/scripts/jquery.min.js"><\/script>')</script>
+
+<!-- JQuery UI fallback -->
+
+<script>window.jQuery.ui || document.write('<script src="/scripts/jquery-ui.js"><\/script>')</script>
+
+
+<!-- Bootstrap JS local fallback -->
+  <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="/scripts/bootstrap.min.js"><\/script>')}</script>
+
+       
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.10.0/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/default.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/semantic.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/bootstrap.min.css"/>
+
+   <script src="/assets/scripts/config.js"></script>
+    <script src="/assets/scripts/alertify.min.js"></script>
+   <script src="/assets/scripts/notify.js"></script>
+   <script src="/assets/scripts/ansi_up.js"></script>
    
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="assets/bootstrap.css">
@@ -22,6 +54,26 @@
     {{content-for "head-footer"}}
   </head>
   <body>
+      
+      <!-- Bootstrap CSS local fallback.  Must live in body tag.  -->
+      <div class="hidden" id="bootstrapCssTest"></div>
+          <script type="text/javascript">
+
+          if ($('#bootstrapCssTest').is(':visible') === true) {
+              $('<link href="/styles/bootstrap.css" rel="stylesheet" type="text/css" />').prependTo('head');
+          }
+      </script>
+    
+      <!-- JQuery UI CSS fallback. Must live in body tag. -->
+      <div class="ui-helper-hidden"></div>
+        <script>
+            $(function () {
+                if ($('.ui-helper-hidden:first').is(':visible') === true) {
+                    $('<link rel="stylesheet" type="text/css" href="/styles/jquery-ui.css" />').prependTo('head');
+                }
+            });
+        </script>
+            
     {{content-for "body"}}
 
     <script src="assets/vendor.js"></script>

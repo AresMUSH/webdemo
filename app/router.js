@@ -25,6 +25,7 @@ Router.map(function() {
   this.route('tutorials');
   this.route('support');
   this.route('forum');
+  this.route('play');
   this.route('admin');
   this.route('notifications');
   this.route('location');

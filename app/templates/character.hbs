@@ -81,8 +81,8 @@
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="background">
         <div class="panel panel-default">
-          <div class="panel-body">
-           Background would be here.
+          <div class="panel-body ansi">
+           {{model.background}}
           </div>
         </div>
     </div>
@@ -100,7 +100,7 @@
     <div role="tabpanel" class="tab-pane" id="wounds"> 
         <div class="panel panel-default">
           <div class="panel-body">
-          Old combat wounds.
+          {{fs3-damage damage=model.damage}}
           </div>
         </div>
     </div>
