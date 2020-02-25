@@ -1,8 +1,8 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
 
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
-    return this.get('store').peekAll('forum-topic');
+    return this.store.findAll('forum-topic');
   }
 });

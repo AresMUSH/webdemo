@@ -1,56 +1,58 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import EmberObject from '@ember/object';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
-    bgskills: function() {
+export default Component.extend({
+    bgskills: computed(function() {
         
         let bg = [
-            Ember.Object.create( { name: "Some skill" , rating: 2, ratingName: 'Proficiency' }),
-            Ember.Object.create( { name: "Another skill" , rating: 1, ratingName: 'Interest' }),            
+            EmberObject.create( { name: "Some skill" , rating: 2, ratingName: 'Proficiency' }),
+            EmberObject.create( { name: "Another skill" , rating: 1, ratingName: 'Interest' }),            
             
         ];
         return bg;
-    }.property(),
+    }),
     
-    langskills: function() {
+    langskills: computed(function() {
         
         let lang = [
-            Ember.Object.create( { name: "Standard" , rating: 3, ratingName: 'Fluent' })
+            EmberObject.create( { name: "Standard" , rating: 3, ratingName: 'Fluent' })
             
         ];
         return lang;
-    }.property(),
+    }),
     
-    fs3attrs: function() {
+    fs3attrs: computed(function() {
         
         let attrs = [
-            Ember.Object.create( { name: "Brawn", desc: "Physical strength and toughness." }),
-            Ember.Object.create( { name: "Reflexes", desc: "Reflexes, dexterity, and hand-eye coordination." }),
-            Ember.Object.create( { name: "Grit", desc: "Willpower and determination." }),
-            Ember.Object.create( { name: "Wits", desc: "Practical intelligence, inventiveness and creativity." }),
-            Ember.Object.create( { name: "Perception", desc: "Noticing things and being aware of your surroundings." }),
-            Ember.Object.create( { name: "Presence", desc: "Charisma and beauty." }),
+            EmberObject.create( { name: "Brawn", desc: "Physical strength and toughness." }),
+            EmberObject.create( { name: "Reflexes", desc: "Reflexes, dexterity, and hand-eye coordination." }),
+            EmberObject.create( { name: "Grit", desc: "Willpower and determination." }),
+            EmberObject.create( { name: "Wits", desc: "Practical intelligence, inventiveness and creativity." }),
+            EmberObject.create( { name: "Perception", desc: "Noticing things and being aware of your surroundings." }),
+            EmberObject.create( { name: "Presence", desc: "Charisma and beauty." }),
         ];
         attrs.forEach(function (attr) {
             attr.set('rating', 2);
             attr.set('ratingName', 'Average');
         });
         return attrs;
-    }.property(),
+    }),
     
-    fs3action: function() {
+    fs3action: computed(function() {
         
         let skills = [
-        Ember.Object.create( { name: "Alertness", desc: "Noticing things and being aware of your surroundings. (Perception)" }),
-        Ember.Object.create( { name: "Athletics", desc: "General running, jumping, climbing, etc. (Brawn)" }),
-        Ember.Object.create( { name: "Composure", desc: "Coolness under pressure. (Grit)" }),
-        Ember.Object.create( { name: "Demolitions", desc: "Blowing stuff up. (Wits)" }),
-        Ember.Object.create( { name: "Firearms", desc: "Shooting guns. (Reflexes)" }),
-        Ember.Object.create( { name: "Gunnery", desc: "Vehicle and heavy weapons. (Reflexes)" }),
-        Ember.Object.create( { name: "Medicine", desc: "Tending to the ill and injured. (Wits)" }),
-        Ember.Object.create( { name: "Melee", desc: "Fighting with fists, knives, and hand-to-hand weapons. (Brawn)" }),
-        Ember.Object.create( { name: "Piloting", desc: "Flying spacecraft. (Reflexes)" }),
-        Ember.Object.create( { name: "Stealth", desc: "Being sneaky. (Reflexes)" }),
-        Ember.Object.create( { name: "Technician", desc: "General mechanics/electronics and fixing things. (Wits)" })
+        EmberObject.create( { name: "Alertness", desc: "Noticing things and being aware of your surroundings. (Perception)" }),
+        EmberObject.create( { name: "Athletics", desc: "General running, jumping, climbing, etc. (Brawn)" }),
+        EmberObject.create( { name: "Composure", desc: "Coolness under pressure. (Grit)" }),
+        EmberObject.create( { name: "Demolitions", desc: "Blowing stuff up. (Wits)" }),
+        EmberObject.create( { name: "Firearms", desc: "Shooting guns. (Reflexes)" }),
+        EmberObject.create( { name: "Gunnery", desc: "Vehicle and heavy weapons. (Reflexes)" }),
+        EmberObject.create( { name: "Medicine", desc: "Tending to the ill and injured. (Wits)" }),
+        EmberObject.create( { name: "Melee", desc: "Fighting with fists, knives, and hand-to-hand weapons. (Brawn)" }),
+        EmberObject.create( { name: "Piloting", desc: "Flying spacecraft. (Reflexes)" }),
+        EmberObject.create( { name: "Stealth", desc: "Being sneaky. (Reflexes)" }),
+        EmberObject.create( { name: "Technician", desc: "General mechanics/electronics and fixing things. (Wits)" })
         ];      
         
         skills.forEach(function (skill) {
@@ -59,7 +61,7 @@ export default Ember.Component.extend({
         });
         
         return skills;
-    }.property()
+    })
     
    
 });

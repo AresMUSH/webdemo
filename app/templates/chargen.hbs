@@ -80,20 +80,20 @@
                <div class="panel-body">
                  <h3>Attributes</h3>
      
-                 {{#if showAttrErrors}}
+                 {{#if @showAttrErrors}}
                  <div class="alert alert-danger">
                  <ul>
-                 {{#each attrErrors as |error|}}
+                 {{#each @attrErrors as |error|}}
                  <li>{{error}}</li>
                  {{/each}}
                  </ul>
                  </div>
                  {{/if}}
      
-                 {{#each fs3attrs as |att|}}
-                 {{#fs3-attrbox rating=att.rating ratingName=att.ratingName updated=(action "abilityChanged")}}
+                 {{#each @fs3attrs as |att|}}
+                 <Fs3Attrbox @rating={{att.rating}} @ratingName={{att.ratingName}} @updated={{action "abilityChanged"}}>
                      <b>{{att.name}}</b> - {{att.desc}}
-                 {{/fs3-attrbox}}
+                 </Fs3Attrbox>
                  {{/each}}
                </div>
              </div>
@@ -104,20 +104,20 @@
                <div class="panel-body">
                  <h3>Action Skills</h3>
      
-                 {{#if showSkillErrors}}
+                 {{#if @showSkillErrors}}
                  <div class="alert alert-danger">
                  <ul>
-                 {{#each skillErrors as |error|}}
+                 {{#each @skillErrors as |error|}}
                  <li>{{error}}</li>
                  {{/each}}
                  </ul>
                  </div>
                  {{/if}}
 
-                 {{#each fs3action as |skill|}}
-                 {{#fs3-actionbox rating=skill.rating ratingName=skill.ratingName updated=(action "abilityChanged")}}
+                 {{#each @fs3action as |skill|}}
+                 <Fs3Actionbox @rating={{skill.rating}} @ratingName={{skill.ratingName}} @updated={{action "abilityChanged"}}>
                      <b>{{skill.name}}</b> - {{skill.desc}}
-                 {{/fs3-actionbox}}
+                 </Fs3Actionbox>
                  {{/each}}
                  
                </div>
@@ -131,10 +131,10 @@
 
                  <h3>Language Skills</h3>
 
-                 {{#each langskills as |skill|}}
-                 {{#fs3-langbox rating=skill.rating ratingName=skill.ratingName updated=(action "abilityChanged")}}
+                 {{#each @langskills as |skill|}}
+                 <Fs3Langbox @rating={{skill.rating}} @ratingName={{skill.ratingName}} @updated={{action "abilityChanged"}}>
                      <b>{{skill.name}}</b>
-                 {{/fs3-langbox}}
+                 </Fs3Langbox>
                  {{/each}}
                </div>
              </div>
@@ -145,10 +145,10 @@
                <div class="panel-body">
                  <h3>Background Skills</h3>
      
-                 {{#each bgskills as |skill|}}
-                 {{#fs3-bgbox rating=skill.rating ratingName=skill.ratingName updated=(action "abilityChanged")}}
-                     <b>{{input type="text" value=skill.name size=60}}</b>
-                 {{/fs3-bgbox}}
+                 {{#each @bgskills as |skill|}}
+                 <Fs3Bgbox @rating={{skill.rating}} @ratingName={{skill.ratingName}} @updated={{action "abilityChanged"}}>
+                     <b><Input @type="text" @value={{skill.name}} @size={{60}} /></b>
+                 </Fs3Bgbox>
 
                  {{/each}}
 

@@ -1,10 +1,10 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model(params) {
     return {
-        chars: this.get('store').peekAll('character'),
-        player: this.get('store').peekRecord('player', params.player_id )
-      }
+        chars: this.store.peekAll('character'),
+        player: this.store.peekRecord('player', params.player_id )
+      };
   }
 });

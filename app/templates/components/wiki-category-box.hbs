@@ -1,7 +1,7 @@
 <div class="wiki-category-wrap">
       <p><span class="fa fa-{{@category.icon}} fa-4x"></span></p>
 
-      <h3>{{#link-to "wiki-category" @category.id}}{{@category.title}}{{/link-to}}</h3>
+      <h3><LinkTo @route="wiki-category" @model={{@category.id}}>{{@category.title}}</LinkTo></h3>
       
       <p>{{@category.description}}</p>
 </div>

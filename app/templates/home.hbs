@@ -4,7 +4,7 @@
          <img src="assets/images/jumbotron.jpg" />
          <div class="jumbotron-tagline">The First Battlestar</div>
          <p>BSG: Unification MUSH is set during the First Cylon War, 50 years prior to the series. William Adama is still a teenager, the 12 colonies of Kobol have only just recently united under a common banner, and the humans are losing the war.</p>
-         <p>{{#link-to "intro"}}<span class="btn btn-default btn-lg btn-splash" href="#" role="button">Learn more</span>{{/link-to}}</p>
+         <p><LinkTo @route="intro"><span class="btn btn-default btn-lg btn-splash" href="#" role="button">Learn more</span></LinkTo></p>
      </div>
 
    <!-- Example row of columns -->
@@ -12,17 +12,17 @@
      <div class="col-md-4 feature-center">
        <p><span class="fa fa-book fa-4x"></span></p>
        <h2>Scenes</h2>
-       <p>Read the game's {{#link-to "scenes"}}story{{/link-to}}.</p>
+       <p>Read the game's <LinkTo @route="scenes">story</LinkTo>.</p>
      </div>
      <div class="col-md-4 feature-center">
        <p><span class="fa fa-globe fa-4x"></span></p>
        <h2>Wiki</h2>
-       <p>Learn about the game on the {{#link-to "wiki"}}wiki{{/link-to}}. </p>
+       <p>Learn about the game on the <LinkTo @route="wiki">wiki</LinkTo>. </p>
     </div>
      <div class="col-md-4 feature-center">
        <p><span class="fa fa-users fa-4x"></span></p>
        <h2>Cast</h2>
-       <p>See the game's cast of {{#link-to "characters"}}characters{{/link-to}}.</p>
+       <p>See the game's cast of <LinkTo @route="characters">characters</LinkTo>.</p>
      </div>
    </div>
 

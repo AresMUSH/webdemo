@@ -8,10 +8,10 @@
      <form class="form">
        <div class="form-group">
        <label for="name">Name (first and last):</label>
-         <input type="text" id="name" class="form-control" value="{{model.name}}">
+         <input type="text" id="name" class="form-control" value="{{@model.name}}">
          
          <label for="age">Age:</label>
-           <input type="text" id="age" class="form-control" value="{{model.age}}">
+           <input type="text" id="age" class="form-control" value="{{@model.age}}">
        </div>       
      </form>
      
@@ -31,7 +31,7 @@
 
      <div class="button-row">
 
-         {{#link-to "character" model.id}}<span class="btn btn-default" href="#" role="button">Save</span>{{/link-to}}
+         <LinkTo @route="character" @model={{@model.id}}><span class="btn btn-default" href="#" role="button">Save</span></LinkTo>
 
      </div>
      

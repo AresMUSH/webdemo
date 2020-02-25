@@ -13,33 +13,33 @@
          </div>
          
          {{#each model as |char|}}
-             {{#link-to "character" char.id}}{{profile-box char=char}}{{/link-to}}
+             <LinkTo @route="character" @model={{char.id}}><ProfileBox @char={{char}} /></LinkTo>
          {{/each}}
          <div class="clearfix" />
          
     </div>
     
-    {{scene-menu}}
+    <SceneMenu />
          <div class="clearfix" />
     
-    {{location-change-event-box author="Faraday" location="Rec Room" zone="Galactica"}}
+    <LocationChangeEventBox @author="Faraday" @location="Rec Room" @zone="Galactica" />
     
-    {{scene-event-box author="Faraday" character="Cate" pose="Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit. Quisque at arcu tortor. Duis placerat ultricies justo, quis euismod purus accumsan at. Sed et orci pretium, malesuada leo eget, pharetra purus. Cras non lacinia risus. Maecenas venenatis sapien at lectus interdum mollis. Aenean pharetra commodo finibus. Maecenas ac laoreet metus. Etiam ornare in magna in tincidunt. Nulla magna arcu, efficitur at massa tincidunt, sollicitudin feugiat ipsum. Cras nec arcu a nunc laoreet facilisis. Interdum et malesuada fames ac ante ipsum primis in faucibus."}}
+    <SceneEventBox @author="Faraday" @character="Cate" @pose="Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit. Quisque at arcu tortor. Duis placerat ultricies justo, quis euismod purus accumsan at. Sed et orci pretium, malesuada leo eget, pharetra purus. Cras non lacinia risus. Maecenas venenatis sapien at lectus interdum mollis. Aenean pharetra commodo finibus. Maecenas ac laoreet metus. Etiam ornare in magna in tincidunt. Nulla magna arcu, efficitur at massa tincidunt, sollicitudin feugiat ipsum. Cras nec arcu a nunc laoreet facilisis. Interdum et malesuada fames ac ante ipsum primis in faucibus." />
 
-    {{scene-event-box author="Faraday" character="Kallas" pose="Morbi <i>fringilla enim</i> sed sem ullamcorper facilisis. Integer semper, diam non rhoncus rutrum, enim quam consequat augue, sed semper arcu enim accumsan ex. Praesent luctus magna sit amet dolor iaculis, nec dapibus leo ultricies. Sed nec ex et quam semper lacinia at vitae nibh. Phasellus urna massa, vestibulum sed cursus tempus, auctor ut orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eget nulla eget tellus euismod mattis et sit amet risus. Donec pharetra venenatis sem, non dapibus justo fringilla quis. Pellentesque neque metus, pulvinar ut ipsum ut, vehicula consectetur orci. Mauris accumsan eu sem at vulputate. Maecenas ac aliquet tellus. Pellentesque quis leo feugiat, mollis nibh eget, convallis metus. Phasellus non consequat metus. Duis maximus ipsum ut tortor ornare, ac imperdiet nisl faucibus."}}
+    <SceneEventBox @author="Faraday" @character="Kallas" @pose="Morbi <i>fringilla enim</i> sed sem ullamcorper facilisis. Integer semper, diam non rhoncus rutrum, enim quam consequat augue, sed semper arcu enim accumsan ex. Praesent luctus magna sit amet dolor iaculis, nec dapibus leo ultricies. Sed nec ex et quam semper lacinia at vitae nibh. Phasellus urna massa, vestibulum sed cursus tempus, auctor ut orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eget nulla eget tellus euismod mattis et sit amet risus. Donec pharetra venenatis sem, non dapibus justo fringilla quis. Pellentesque neque metus, pulvinar ut ipsum ut, vehicula consectetur orci. Mauris accumsan eu sem at vulputate. Maecenas ac aliquet tellus. Pellentesque quis leo feugiat, mollis nibh eget, convallis metus. Phasellus non consequat metus. Duis maximus ipsum ut tortor ornare, ac imperdiet nisl faucibus." />
 
-    {{scene-event-box author="Faraday" character="Cate" pose="Aenean venenatis, turpis in mollis eleifend, justo diam convallis odio, eget luctus sem magna et nisi. Vivamus pretium posuere arcu, vel semper risus imperdiet aliquet. Morbi nisi elit, gravida et interdum in, sollicitudin eu risus. Nulla dignissim augue eget mauris elementum, at condimentum leo vulputate. Maecenas luctus, justo sollicitudin rutrum mollis, lorem tellus gravida magna, vitae sollicitudin eros magna vitae odio. Donec vestibulum vulputate ipsum et pellentesque. Morbi id nisi egestas nibh consectetur feugiat. Sed tincidunt lectus aliquet nunc imperdiet maximus. Quisque turpis erat, tempor vel ligula ac, iaculis cursus leo. Fusce dictum sapien eget fringilla vestibulum. Pellentesque et nunc ut magna sodales maximus a sit amet massa."}}
+    <SceneEventBox @author="Faraday" @character="Cate" @pose="Aenean venenatis, turpis in mollis eleifend, justo diam convallis odio, eget luctus sem magna et nisi. Vivamus pretium posuere arcu, vel semper risus imperdiet aliquet. Morbi nisi elit, gravida et interdum in, sollicitudin eu risus. Nulla dignissim augue eget mauris elementum, at condimentum leo vulputate. Maecenas luctus, justo sollicitudin rutrum mollis, lorem tellus gravida magna, vitae sollicitudin eros magna vitae odio. Donec vestibulum vulputate ipsum et pellentesque. Morbi id nisi egestas nibh consectetur feugiat. Sed tincidunt lectus aliquet nunc imperdiet maximus. Quisque turpis erat, tempor vel ligula ac, iaculis cursus leo. Fusce dictum sapien eget fringilla vestibulum. Pellentesque et nunc ut magna sodales maximus a sit amet massa." />
 
-    {{scene-event-box author="Faraday" character="Cate" pose="<span class=\"fa fa-cubes fa-2x\"></span> Cate Rhodes rolled Alertness: <span style=\"color:green\">Good Success!</span> (7 6 4 3)"}}
+    <SceneEventBox @author="Faraday" @character="Cate" @pose="<span class='fa fa-cubes fa-2x'></span> Cate Rhodes rolled Alertness: <span style='color:green'>Good Success!</span> (7 6 4 3)" />
     
-    {{scene-event-box author="Faraday" character="Kallas" pose="<span class=\"fa fa-comments fa-2x\"></span> <span style=\"color:blue\">Here's a question about the scene.  Comments are hidden by default once the scene is completed.</span>"}}
+    <SceneEventBox @author="Faraday" @character="Kallas" @pose="<span class='fa fa-comments fa-2x'></span> <span style='color:blue''>Here's a question about the scene.  Comments are hidden by default once the scene is completed.</span>" />
     
-    {{location-change-event-box author="Faraday" location="Landing Bay" zone="Galactica"}}
+    <LocationChangeEventBox @author="Faraday" @location="Landing Bay" @zone="Galactica" />
    
    <div class="clearfix" />
    
    
-   {{scene-event-box author="Faraday" character="Cate" pose="Aenean venenatis, turpis in mollis eleifend, justo diam convallis odio, eget luctus sem magna et nisi. Vivamus pretium posuere arcu, vel semper risus imperdiet aliquet. Morbi nisi elit, gravida et interdum in, sollicitudin eu risus. Nulla dignissim augue eget mauris elementum, at condimentum leo vulputate. Maecenas luctus, justo sollicitudin rutrum mollis, lorem tellus gravida magna, vitae sollicitudin eros magna vitae odio. Donec vestibulum vulputate ipsum et pellentesque. Morbi id nisi egestas nibh consectetur feugiat. Sed tincidunt lectus aliquet nunc imperdiet maximus. Quisque turpis erat, tempor vel ligula ac, iaculis cursus leo. Fusce dictum sapien eget fringilla vestibulum. Pellentesque et nunc ut magna sodales maximus a sit amet massa."}}
+   <SceneEventBox @author="Faraday" @character="Cate" @pose="Aenean venenatis, turpis in mollis eleifend, justo diam convallis odio, eget luctus sem magna et nisi. Vivamus pretium posuere arcu, vel semper risus imperdiet aliquet. Morbi nisi elit, gravida et interdum in, sollicitudin eu risus. Nulla dignissim augue eget mauris elementum, at condimentum leo vulputate. Maecenas luctus, justo sollicitudin rutrum mollis, lorem tellus gravida magna, vitae sollicitudin eros magna vitae odio. Donec vestibulum vulputate ipsum et pellentesque. Morbi id nisi egestas nibh consectetur feugiat. Sed tincidunt lectus aliquet nunc imperdiet maximus. Quisque turpis erat, tempor vel ligula ac, iaculis cursus leo. Fusce dictum sapien eget fringilla vestibulum. Pellentesque et nunc ut magna sodales maximus a sit amet massa." />
    
    
           <div class="clearfix" />
@@ -47,7 +47,7 @@
             
     <div class="button-row">
        
-       {{scene-menu}}
+       <SceneMenu />
        
       
     </div>

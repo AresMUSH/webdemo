@@ -19,26 +19,26 @@
                          
                          Welcome, Faraday <span class="badge important">5</span> <span class="caret"></span></a>
                          <ul class="dropdown-menu">
-                           <li>{{#link-to "notifications"}}<span class="fa fa-bell-o"></span> Notifications <span class="badge">1</span>{{/link-to}}</li>
-                           <li>{{#link-to "player" 1}}<span class="fa fa-cogs"></span> Account{{/link-to}}</li>
-                           <li>{{#link-to "chargen"}}<span class="fa fa-user"></span> Create Character{{/link-to}}</li>
+                           <li><LinkTo @route="notifications"><span class="fa fa-bell-o"></span> Notifications <span class="badge">1</span></LinkTo></li>
+                           <li><LinkTo @route="player" @model={{1}}><span class="fa fa-cogs"></span> Account</LinkTo></li>
+                           <li><LinkTo @route="chargen"><span class="fa fa-user"></span> Create Character</LinkTo></li>
                            <li role="separator" class="divider"></li>
                            <li><a href="#"><span class="fa fa-sign-out"></span> Logout</a></li>
                          </ul>
                        </li>
            {{else}}
-               <li>{{#link-to "login"}}<span class="fa fa-sign-in"></span> Login{{/link-to}}</li>
+               <li><LinkTo @route="login"><span class="fa fa-sign-in"></span> Login</LinkTo></li>
             {{/if}}
                         
-            <li>{{#link-to "play"}}Play{{/link-to}}</li>
+            <li><LinkTo @route="play">Play</LinkTo></li>
             
             <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                       
                       Scenes <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li>{{#link-to "running-scenes"}}Running Scenes{{/link-to}}</li>
-                        <li>{{#link-to "scenes"}}Completed Scenes{{/link-to}}</li>
+                        <li><LinkTo @route="running-scenes">Running Scenes</LinkTo></li>
+                        <li><LinkTo @route="scenes">Completed Scenes</LinkTo></li>
                       </ul>
                     </li>
             
@@ -48,15 +48,15 @@
                       
                       Directory <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li>{{#link-to "characters"}}Characters{{/link-to}}</li>
-                        <li>{{#link-to "players"}}Players{{/link-to}}</li>
-                        <li>{{#link-to "locations"}}Locations{{/link-to}}</li>
+                        <li><LinkTo @route="characters">Characters</LinkTo></li>
+                        <li><LinkTo @route="players">Players</LinkTo></li>
+                        <li><LinkTo @route="locations">Locations</LinkTo></li>
                         <li role="separator" class="divider"></li>
                         <li><b>FS3</b></li>
-                        <li>{{#link-to "skills"}}Skills{{/link-to}}</li>
-                        <li>{{#link-to "weapons"}}Weapons{{/link-to}}</li>
-                        <li>{{#link-to "armor"}}Armor{{/link-to}}</li>
-                        <li>{{#link-to "vehicles"}}Vehicles{{/link-to}}</li>
+                        <li><LinkTo @route="skills">Skills</LinkTo></li>
+                        <li><LinkTo @route="weapons">Weapons</LinkTo></li>
+                        <li><LinkTo @route="armor">Armor</LinkTo></li>
+                        <li><LinkTo @route="vehicles">Vehicles</LinkTo></li>
                       </ul>
                     </li>
                     
@@ -66,10 +66,10 @@
                       
                       Community <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li>{{#link-to "who"}}Who's Online{{/link-to}}</li>
-                        <li>{{#link-to "wiki"}}Wiki{{/link-to}}</li>
-                        <li>{{#link-to "events"}}Events{{/link-to}}</li>
-                        <li>{{#link-to "forum"}}Forum{{/link-to}}</li>
+                        <li><LinkTo @route="who">Who's Online</LinkTo></li>
+                        <li><LinkTo @route="wiki">Wiki</LinkTo></li>
+                        <li><LinkTo @route="events">Events</LinkTo></li>
+                        <li><LinkTo @route="forum">Forum</LinkTo></li>
                       </ul>
                     </li>
 
@@ -80,9 +80,9 @@
                       
                       Help <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li>{{#link-to "support"}}Support{{/link-to}}</li>
-                        <li>{{#link-to "tutorials"}}Tutorials{{/link-to}}</li>
-                        <li>{{#link-to "admin"}}Admin{{/link-to}}</li>
+                        <li><LinkTo @route="support">Support</LinkTo></li>
+                        <li><LinkTo @route="tutorials">Tutorials</LinkTo></li>
+                        <li><LinkTo @route="admin">Admin</LinkTo></li>
                       </ul>
                     </li>
             

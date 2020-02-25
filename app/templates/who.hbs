@@ -5,9 +5,9 @@
      
      <ul class="list-group">
       <li class="list-group-item">
-         <img src="/assets/images/Faraday.jpg" class="player-profile-icon-wrap" /> {{#link-to "player" 1}}Faraday{{/link-to}} <span class="clearfix" /> </li>
+         <img src="/assets/images/Faraday.jpg" class="player-profile-icon-wrap" /> <LinkTo @route="player" @model={{1}}>Faraday</LinkTo> <span class="clearfix" /> </li>
       <li class="list-group-item">
-         <img src="/assets/images/Barnacles.jpg" class="player-profile-icon-wrap" /> {{#link-to "player" 2}}Barnacles{{/link-to}} <span class="clearfix" /> </li>
+         <img src="/assets/images/Barnacles.jpg" class="player-profile-icon-wrap" /> <LinkTo @route="player" @model={{2}}>Barnacles</LinkTo> <span class="clearfix" /> </li>
      </ul>
      
   </div>

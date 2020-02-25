@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
+export default Component.extend({
     minRating: 0,
     maxRating: 3,
     
@@ -26,8 +26,8 @@ export default Ember.Component.extend({
     
     actions: { 
         increment() {
-            var current = this.get('rating');
-            if (current < this.get('maxRating')) {
+            var current = this.rating;
+            if (current < this.maxRating) {
                 this.set('rating',  current + 1);
             }
             this.set('ratingName', this.getRatingName());
@@ -35,8 +35,8 @@ export default Ember.Component.extend({
         },
     
         decrement() {
-            var current = this.get('rating');
-            if (current > this.get('minRating')) {
+            var current = this.rating;
+            if (current > this.minRating) {
                 this.set('rating',  current - 1);
             }
             this.set('ratingName', this.getRatingName());

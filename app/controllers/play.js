@@ -1,6 +1,7 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
     connected: false,
     consoleText: '',
     text1: '',
@@ -10,26 +11,15 @@ export default Ember.Controller.extend({
     idleKeepalive: function() {
     },
     
-    onMessage: function(self, evt) {
-        
-    },
-    onConnect: function(self) {
-        document.getElementById("sendMsg").focus();
-        self.set('connected', true);        
-    },
-    onDisconnect: function(self) {
-        self.set('connected', false);
-    },
-
-    showDisconnect: function() {
-        return this.get('connected');
-    }.property('connected'),
+    showDisconnect: computed('connected', function() {
+        return this.connected;
+    }),
     
-    showConnect: function() {  
-        return !this.get('connected');
-    }.property('connected'),
+    showConnect: computed('connected', function() {  
+        return !this.connected;
+    }),
     
-    sendInput: function(msg) {
+    sendInput: function() {
 
     },
     

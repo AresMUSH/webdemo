@@ -1,9 +1,7 @@
-import Ember from 'ember';
-import { A } from '@ember/array';
-import EmberObject from '@ember/object';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
-    return this.get('store').peekAll('player');    
+    return this.store.peekAll('player');    
   }
 });

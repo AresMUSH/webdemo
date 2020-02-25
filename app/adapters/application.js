@@ -1,13 +1,18 @@
 //import DS from 'ember-data';
 //export default DS.JSONAPIAdapter.extend({
-    //});
+//});
+
+
+import { underscore } from '@ember/string';
 
 
 import Ember from 'ember';
-import JSONAPIAdapter from 'ember-data/adapters/json-api';
+import JSONAPIAdapter from '@ember-data/adapter/json-api';
 
 
-const { String: { pluralize, underscore } } = Ember;
+const { String: {
+  pluralize
+} } = Ember;
 
 export default JSONAPIAdapter.extend({
 

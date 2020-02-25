@@ -10,35 +10,35 @@
     </div>
  
     <ul class="list-unstyled">
-    <li>{{#link-to "who"}}2 players {{/link-to}} online</li>
+    <li><LinkTo @route="who">2 players </LinkTo> online</li>
     <li>Today is 12 March 2237</li>
     </ul>
  
     <h2>Notifications</h2>
     <ul class="list-unstyled">
-    <li>New activity in {{#link-to "scene"}}Welcome Aboard{{/link-to}}. </li>
-    <li>Barnacles mentioned you in {{#link-to "forum-topic" 1}}Furious Debate{{/link-to}}. </li>
+    <li>New activity in <LinkTo @route="scene">Welcome Aboard</LinkTo>. </li>
+    <li>Barnacles mentioned you in <LinkTo @route="forum-topic" @model={{1}}>Furious Debate</LinkTo>. </li>
     </ul>
     
      <h2>Upcoming Events</h2>
      <ul class="list-unstyled">
-     <li>{{#link-to "events"}}Something Fun 4/28/17 @ 8pm EST{{/link-to}}</li>
+     <li><LinkTo @route="events">Something Fun 4/28/17 @ 8pm EST</LinkTo></li>
      </ul>
      
      <h2>Recent Scenes</h2>
      <ul class="list-unstyled">
-     <li>{{#link-to "scene"}}Welcome Aboard{{/link-to}}</li>
+     <li><LinkTo @route="scene">Welcome Aboard</LinkTo></li>
      </ul>
 
      <h2>Recent Wiki Changes</h2>
      <ul class="list-unstyled">
-     <li>{{#link-to "wiki-category" 1}}Setting{{/link-to}}</li>
-     <li>{{#link-to "wiki-category" 2}}Policies{{/link-to}}</li>
+     <li><LinkTo @route="wiki-category" @model={{1}}>Setting</LinkTo></li>
+     <li><LinkTo @route="wiki-category" @model={{2}}>Policies</LinkTo></li>
      </ul>
       
      <h2>Recent Forum Posts</h2>
      <ul class="list-unstyled">
-     <li>{{#link-to "forum-topic" 2}}Best Game Ever{{/link-to}}</li>
-     <li>{{#link-to "forum-topic" 1}}Furious Debate{{/link-to}}</li>
+     <li><LinkTo @route="forum-topic" @model={{2}}>Best Game Ever</LinkTo></li>
+     <li><LinkTo @route="forum-topic" @model={{1}}>Furious Debate</LinkTo></li>
      </ul>
  </div>

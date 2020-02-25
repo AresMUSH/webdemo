@@ -1,9 +1,9 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 import { A } from '@ember/array';
 
-export default Ember.Route.extend({
-    model() {
-       this.get('store').push({
+export default Route.extend({
+    beforeModel() {
+       this.store.push({
             data: [
                 {
                     id: 1,

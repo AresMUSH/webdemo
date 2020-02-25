@@ -15,11 +15,11 @@
         
         <div id="console">{{{consoleText}}}</div>
         
-        {{textarea value=text1 id="sendMsg" cols="80" rows="6" enter="sendMsg1"}}
+        <Textarea @value={{text1}} @id="sendMsg" @cols="80" @rows="6" @enter="sendMsg1" />
         
         <button class="sendButton btn-primary btn" {{action "sendMsg1"}}>Send Text</button>
 
-        {{textarea value=text2 id="sendMsg2" cols="80" rows="6" enter="sendMsg2"}}
+        <Textarea @value={{text2}} @id="sendMsg2" @cols="80" @rows="6" @enter="sendMsg2" />
 
         <button class="sendButton2 btn-primary btn" {{action "sendMsg2"}}>Send Text</button>
         <div id="debug"></div>

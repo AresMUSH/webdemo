@@ -23,7 +23,7 @@
              <div class="panel-body">
                 <div>{{faction.blurb}}</div>
                 {{#each faction.chars as |char|}}
-                   {{#link-to "character" char.id}}{{profile-box char=char}}{{/link-to}}
+                   <LinkTo @route="character" @model={{char.id}}><ProfileBox @char={{char}} /></LinkTo>
                 {{/each}}
                 <div class="clearfix" />
              </div>
@@ -35,7 +35,7 @@
        
         
     <div class="button-row">
-       {{#link-to "chargen"}}<span class="btn btn-default" href="#" role="button">Create New Character</span>{{/link-to}}
+       <LinkTo @route="chargen"><span class="btn btn-default" href="#" role="button">Create New Character</span></LinkTo>
     </div>
     
   </div>

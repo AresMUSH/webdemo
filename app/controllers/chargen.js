@@ -1,10 +1,12 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import EmberObject from '@ember/object';
+import Controller from '@ember/controller';
 
 String.prototype.capitalizeFirstLetter = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
-export default Ember.Controller.extend({
+export default Controller.extend({
     fs3attrs: [],
     fs3action: null,
     attrErrors: [],
@@ -16,43 +18,43 @@ export default Ember.Controller.extend({
     
     resetSkills: function() {
         let bg = [
-            Ember.Object.create( { name: "Enter A Skill Name" , rating: 1, ratingName: 'Interest' })
+            EmberObject.create( { name: "Enter A Skill Name" , rating: 1, ratingName: 'Interest' })
         ];
         this.set('bgskills', bg);
         
         let lang = [
-            Ember.Object.create( { name: "Standard" , rating: 3, ratingName: 'Fluent' }),
-            Ember.Object.create( { name: "Leonese" , rating: 0, ratingName: 'Unskilled' }),
-            Ember.Object.create( { name: "Sagittaran" , rating: 0, ratingName: 'Unskilled' }),
-            Ember.Object.create( { name: "Scoripian" , rating: 0, ratingName: 'Unskilled' }),
-            Ember.Object.create( { name: "Gemenese" , rating: 0, ratingName: 'Unskilled' }),
-            Ember.Object.create( { name: "Celtan" , rating: 0, ratingName: 'Unskilled' })
+            EmberObject.create( { name: "Standard" , rating: 3, ratingName: 'Fluent' }),
+            EmberObject.create( { name: "Leonese" , rating: 0, ratingName: 'Unskilled' }),
+            EmberObject.create( { name: "Sagittaran" , rating: 0, ratingName: 'Unskilled' }),
+            EmberObject.create( { name: "Scoripian" , rating: 0, ratingName: 'Unskilled' }),
+            EmberObject.create( { name: "Gemenese" , rating: 0, ratingName: 'Unskilled' }),
+            EmberObject.create( { name: "Celtan" , rating: 0, ratingName: 'Unskilled' })
             
         ];
         this.set('langskills', lang);
         
         let attrs = [
-            Ember.Object.create( { name: "Brawn", desc: "Physical strength and toughness.", rating: 2, ratingName: 'Average' }),
-            Ember.Object.create( { name: "Reflexes", desc: "Reflexes, dexterity, and hand-eye coordination.", rating: 2, ratingName: 'Average' }),
-            Ember.Object.create( { name: "Grit", desc: "Willpower and determination.", rating: 2, ratingName: 'Average' }),
-            Ember.Object.create( { name: "Wits", desc: "Practical intelligence, inventiveness and creativity.", rating: 2, ratingName: 'Average' }),
-            Ember.Object.create( { name: "Perception", desc: "Noticing things and being aware of your surroundings.", rating: 2, ratingName: 'Average' }),
-            Ember.Object.create( { name: "Presence", desc: "Charisma and beauty.", rating: 2, ratingName: 'Average' }),
+            EmberObject.create( { name: "Brawn", desc: "Physical strength and toughness.", rating: 2, ratingName: 'Average' }),
+            EmberObject.create( { name: "Reflexes", desc: "Reflexes, dexterity, and hand-eye coordination.", rating: 2, ratingName: 'Average' }),
+            EmberObject.create( { name: "Grit", desc: "Willpower and determination.", rating: 2, ratingName: 'Average' }),
+            EmberObject.create( { name: "Wits", desc: "Practical intelligence, inventiveness and creativity.", rating: 2, ratingName: 'Average' }),
+            EmberObject.create( { name: "Perception", desc: "Noticing things and being aware of your surroundings.", rating: 2, ratingName: 'Average' }),
+            EmberObject.create( { name: "Presence", desc: "Charisma and beauty.", rating: 2, ratingName: 'Average' }),
         ];
         this.set('fs3attrs', attrs);
         
         let skills = [
-        Ember.Object.create( { name: "Alertness", desc: "Noticing things and being aware of your surroundings. (Perception)" }),
-        Ember.Object.create( { name: "Athletics", desc: "General running, jumping, climbing, etc. (Brawn)" }),
-        Ember.Object.create( { name: "Composure", desc: "Coolness under pressure. (Grit)" }),
-        Ember.Object.create( { name: "Demolitions", desc: "Blowing stuff up. (Wits)" }),
-        Ember.Object.create( { name: "Firearms", desc: "Shooting guns. (Reflexes)" }),
-        Ember.Object.create( { name: "Gunnery", desc: "Vehicle and heavy weapons. (Reflexes)" }),
-        Ember.Object.create( { name: "Medicine", desc: "Tending to the ill and injured. (Wits)" }),
-        Ember.Object.create( { name: "Melee", desc: "Fighting with fists, knives, and hand-to-hand weapons. (Brawn)" }),
-        Ember.Object.create( { name: "Piloting", desc: "Flying spacecraft. (Reflexes)" }),
-        Ember.Object.create( { name: "Stealth", desc: "Being sneaky. (Reflexes)" }),
-        Ember.Object.create( { name: "Technician", desc: "General mechanics/electronics and fixing things. (Wits)" })
+        EmberObject.create( { name: "Alertness", desc: "Noticing things and being aware of your surroundings. (Perception)" }),
+        EmberObject.create( { name: "Athletics", desc: "General running, jumping, climbing, etc. (Brawn)" }),
+        EmberObject.create( { name: "Composure", desc: "Coolness under pressure. (Grit)" }),
+        EmberObject.create( { name: "Demolitions", desc: "Blowing stuff up. (Wits)" }),
+        EmberObject.create( { name: "Firearms", desc: "Shooting guns. (Reflexes)" }),
+        EmberObject.create( { name: "Gunnery", desc: "Vehicle and heavy weapons. (Reflexes)" }),
+        EmberObject.create( { name: "Medicine", desc: "Tending to the ill and injured. (Wits)" }),
+        EmberObject.create( { name: "Melee", desc: "Fighting with fists, knives, and hand-to-hand weapons. (Brawn)" }),
+        EmberObject.create( { name: "Piloting", desc: "Flying spacecraft. (Reflexes)" }),
+        EmberObject.create( { name: "Stealth", desc: "Being sneaky. (Reflexes)" }),
+        EmberObject.create( { name: "Technician", desc: "General mechanics/electronics and fixing things. (Wits)" })
         ];      
         
         skills.forEach(function (skill) {
@@ -62,23 +64,23 @@ export default Ember.Controller.extend({
         
         this.set('fs3action', skills);
     },     
-    showAttrErrors: function() {
-        if (this.get('attrErrors').length > 0) {
+    showAttrErrors: computed('attrErrors', function() {
+        if (this.attrErrors.length > 0) {
             return true;
         }
         return false;
-    }.property('attrErrors'),
+    }),
 
-    showSkillErrors: function() {
-        if (this.get('skillErrors').length > 0) {
+    showSkillErrors: computed('skillErrors', function() {
+        if (this.skillErrors.length > 0) {
             return true;
         }
         return false;
-    }.property('skillErrors'),
+    }),
         
     attrPoints: function() {
         let totalAttrs = 0;
-        let fa = this.get('fs3attrs');
+        let fa = this.fs3attrs;
         
         Object.keys(fa).forEach(function (key) {
             let rating = fa[key]['rating'];
@@ -91,7 +93,7 @@ export default Ember.Controller.extend({
     
     skillPoints: function() {
         let totalSkills = 0;
-        let fa = this.get('fs3action');
+        let fa = this.fs3action;
         
         Object.keys(fa).forEach(function (key) {
             let rating = fa[key]['rating'];
@@ -100,7 +102,7 @@ export default Ember.Controller.extend({
             } 
         });
         
-        fa = this.get('bgskills');
+        fa = this.bgskills;
         let bgPoints = 0;
                 Object.keys(fa).forEach(function (key) {
                     let rating = fa[key]['rating'];
@@ -114,7 +116,7 @@ export default Ember.Controller.extend({
         
         totalSkills = totalSkills + bgPoints;
          
-        fa = this.get('langskills');
+        fa = this.langskills;
         let langPoints = 0;
                 Object.keys(fa).forEach(function (key) {
                     let rating = fa[key]['rating'];
@@ -146,10 +148,10 @@ export default Ember.Controller.extend({
         this.set('attrErrors', []);
         this.set('skillErrors', []);
         
-        let highAttrs = this.countHigh(this.get('fs3attrs'), 5);
-        let highAttrs2 = this.countHigh(this.get('fs3attrs'), 4);
-        let highSkills = this.countHigh(this.get('fs3action'), 7);
-        let highSkills2 = this.countHigh(this.get('fs3action'), 5);
+        let highAttrs = this.countHigh(this.fs3attrs, 5);
+        let highAttrs2 = this.countHigh(this.fs3attrs, 4);
+        let highSkills = this.countHigh(this.fs3action, 7);
+        let highSkills2 = this.countHigh(this.fs3action, 5);
         
         if (highAttrs > 1)
         {
@@ -187,11 +189,11 @@ export default Ember.Controller.extend({
     
     actions: {
         addBackgroundSkill() {
-            this.get('bgskills').pushObject( Ember.Object.create( { name: "Skill Name" , rating: 1, ratingName: 'Interest' }) );  
+            this.bgskills.pushObject( EmberObject.create( { name: "Skill Name" , rating: 1, ratingName: 'Interest' }) );  
             this.validateChar();
         },
         addLanguage() {
-            this.get('langskills').pushObject( Ember.Object.create( { name: "Language Name" , rating: 1, ratingName: 'Beginner' }) );  
+            this.langskills.pushObject( EmberObject.create( { name: "Language Name" , rating: 1, ratingName: 'Beginner' }) );  
             this.validateChar();
         },
         abilityChanged() {

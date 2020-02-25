@@ -6,8 +6,8 @@
      <p>Your wiki landing page.  This text is configurable, as are the categories below.</p>
      
      <div>
-     {{#each model as |cat|}}
-        {{wiki-category-box category=cat}}
+     {{#each @model as |cat|}}
+        <WikiCategoryBox @category={{cat}} />
      {{/each}}
      
      </div>

@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
-    chars: function() {  
+export default Controller.extend({
+    chars: computed('model', function() {  
         if (this.get('model.player.id') == 1) {            
             return this.get('model.chars').filter(function(x) { return x.id == 1 || x.id == 2; });
         }
@@ -9,5 +10,5 @@ export default Ember.Controller.extend({
         {
             return [];
         }
-    }.property('model')
+    })
 });

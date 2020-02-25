@@ -1,12 +1,12 @@
 <div class="row">
  <div class="col col-md-12">
- <h1>{{model.player.name}}</h1>
+ <h1>{{@model.player.name}}</h1>
  
      <div class="row profile-wrap">
          <div class="col col-sm-4"> 
     
              <div>
-               <img class="profile-image" src="/assets/images/{{model.player.profile_image}}"/>
+               <img class="profile-image" src="/assets/images/{{@model.player.profile_image}}"/>
              </div>
     
          </div>
@@ -23,13 +23,13 @@
     <h2>Characters</h2>
     
     {{#each chars as |char|}}
-        {{#link-to "character" char.id}}{{profile-box char=char}}{{/link-to}}
+        <LinkTo @route="character" @model={{char.id}}><ProfileBox @char={{char}} /></LinkTo>
     {{/each}}
     
     <div class="clearfix" />
     <div class="button-row">
        <span class="btn btn-default" href="#" role="button">Edit Profile</span>
-       {{#link-to "chargen"}}<span class="btn btn-default" href="#" role="button">Create New Character</span>{{/link-to}} 
+       <LinkTo @route="chargen"><span class="btn btn-default" href="#" role="button">Create New Character</span></LinkTo> 
     </div>
     
  </div>

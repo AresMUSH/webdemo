@@ -31,8 +31,8 @@
         
   
     <div class="button-row">
-       {{#link-to "create-scene"}}<span class="btn btn-primary" href="#" role="button">Start New Scene</span>{{/link-to}}
-       {{#link-to "running-scenes"}}<span class="btn btn-default" href="#" role="button">View Running Scenes</span>{{/link-to}}
+       <LinkTo @route="create-scene"><span class="btn btn-primary" href="#" role="button">Start New Scene</span></LinkTo>
+       <LinkTo @route="running-scenes"><span class="btn btn-default" href="#" role="button">View Running Scenes</span></LinkTo>
     </div>
     
   </div>

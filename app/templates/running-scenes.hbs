@@ -16,7 +16,7 @@
        <div role="tabpanel" class="tab-pane active" id="yours">
            <div class="panel panel-default">
              <div class="panel-body">
-                {{#link-to "scene"}}Welcome Aboard{{/link-to}}
+                <LinkTo @route="scene">Welcome Aboard</LinkTo>
              </div>
            </div>
           </div>
@@ -32,7 +32,7 @@
        
         
     <div class="button-row">
-       {{#link-to "create-scene"}}<span class="btn btn-default" href="#" role="button">Start New Scene</span>{{/link-to}}
+       <LinkTo @route="create-scene"><span class="btn btn-default" href="#" role="button">Start New Scene</span></LinkTo>
     </div>
     
   </div>
