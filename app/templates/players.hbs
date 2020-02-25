@@ -4,7 +4,7 @@
      <h1>Players</h1>
      
     {{#each model as |char|}}
-       {{#link-to "player" char.id}}{{profile-box char=char}}{{/link-to}}
+       {{#link-to "player" char.id}}<ProfileBox @char={{char}} />{{/link-to}}
     {{/each}}
     <div class="clearfix" />
                     

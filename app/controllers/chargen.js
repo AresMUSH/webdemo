@@ -13,9 +13,6 @@ export default Ember.Controller.extend({
     bgskills: [],
     powerLevel: 0,
     
-    init: function() {
-        this.resetSkills();
-    },
     
     resetSkills: function() {
         let bg = [

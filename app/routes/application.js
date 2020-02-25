@@ -1,17 +1,17 @@
 import Ember from 'ember';
+import { A } from '@ember/array';
 
 export default Ember.Route.extend({
     model() {
        this.get('store').push({
             data: [
-                
                 {
                     id: 1,
                     type: 'forum-topic',
                     attributes: {
                         title: 'Furious Debate',
                         lastPost: 'Barnacles',
-                        posters: [ 'Faraday', 'Barnacles' ]                        
+                        posters: A([ 'Faraday', 'Barnacles' ])
                     }
                 },
                 
@@ -21,74 +21,10 @@ export default Ember.Route.extend({
                     attributes: {
                         title: 'Best Game Evar',
                         lastPost: 'Faraday',
-                        posters: [ 'Barnacles', 'Phoebe', 'Faraday' ]
+                        posters: A([ 'Barnacles', 'Phoebe', 'Faraday' ])
                     }
                 },
                 
-               
-            {
-                id: 1,
-                type: 'wiki-category',
-                attributes: {
-                    title: 'Setting',
-                    description: 'Game setting',
-                    icon: 'globe',
-                    text: 'Blah blah setting stuff.'
-                },
-                relationships: {}
-            },
-            {
-                id: 2,
-                type: 'wiki-category',
-                attributes: {
-                    title: 'Policies',
-                    description: 'Game rules',
-                    icon: 'bank',
-                    text: 'Blah blah rules stuff.'
-                },
-                relationships: {}
-            },
-            {
-                id: 3,
-                type: 'wiki-category',
-                attributes: {
-                    title: 'System',
-                    description: 'Game system',
-                    icon: 'cubes',
-                    text: 'Blah blah system stuff.'
-                },
-                relationships: {}
-            },
-            {
-                id: 1,
-                type: 'player',
-                attributes: {
-                    name: 'Faraday',
-                    profile_image: 'Faraday.jpg'
-                },
-                relationships: {}
-            },
-            {
-                id: 2,
-                type: 'player',
-                attributes: {
-                    name: 'Barnacles',
-                    profile_image: 'Barnacles.jpg'
-                },
-                relationships: {}
-            },
-            
-            {
-                id: 3,
-                type: 'player',
-                attributes: {
-                    name: 'Phoebe',
-                    profile_image: 'Phoebe.jpg'
-                },
-                relationships: {}
-            },
-            
-            /*
                 {
                 id: 1,
                 type: 'character',
@@ -148,7 +84,67 @@ export default Ember.Route.extend({
                 },
                 relationships: {}
             },
-            */
+            {
+                id: 1,
+                type: 'wiki-category',
+                attributes: {
+                    title: 'Setting',
+                    description: 'Game setting',
+                    icon: 'globe',
+                    text: 'Blah blah setting stuff.'
+                },
+                relationships: {}
+            },
+            {
+                id: 2,
+                type: 'wiki-category',
+                attributes: {
+                    title: 'Policies',
+                    description: 'Game rules',
+                    icon: 'university',
+                    text: 'Blah blah rules stuff.'
+                },
+                relationships: {}
+            },
+            {
+                id: 3,
+                type: 'wiki-category',
+                attributes: {
+                    title: 'System',
+                    description: 'Game system',
+                    icon: 'cubes',
+                    text: 'Blah blah system stuff.'
+                },
+                relationships: {}
+            },
+            {
+                id: 1,
+                type: 'player',
+                attributes: {
+                    name: 'Faraday',
+                    profile_image: 'Faraday.jpg'
+                },
+                relationships: {}
+            },
+            {
+                id: 2,
+                type: 'player',
+                attributes: {
+                    name: 'Barnacles',
+                    profile_image: 'Barnacles.jpg'
+                },
+                relationships: {}
+            },
+            
+            {
+                id: 3,
+                type: 'player',
+                attributes: {
+                    name: 'Phoebe',
+                    profile_image: 'Phoebe.jpg'
+                },
+                relationships: {}
+            },
   
         ]
     }); 

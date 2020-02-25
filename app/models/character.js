@@ -1,15 +1,15 @@
-import DS from 'ember-data';
+import Model, { attr, belongsTo, hasMany } from '@ember-data/model';
 
-export default DS.Model.extend({
-    name: DS.attr(),
-    background: DS.attr(),
-    rank: DS.attr(),
-    age: DS.attr(),
-    faction: DS.attr(),
-    position: DS.attr(),
-    profile_image: DS.attr(),
-    played_by: DS.attr(),
-    gender: DS.attr(),
-    origin: DS.attr(),
-    damage: DS.attr()
+export default Model.extend({
+    name: attr(),
+    background: attr(),
+    rank: attr(),
+    age: attr(),
+    faction: attr(),
+    position: attr(),
+    profile_image: attr(),
+    played_by: attr(),
+    gender: attr(),
+    origin: attr(),
+    damage: attr()
 });

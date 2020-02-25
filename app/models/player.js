@@ -1,6 +1,6 @@
-import DS from 'ember-data';
+import Model, { attr, belongsTo, hasMany } from '@ember-data/model';
 
-export default DS.Model.extend({
-    name: DS.attr(),
-    profile_image: DS.attr()
+export default Model.extend({
+    name: attr(),
+    profile_image: attr()
 });
